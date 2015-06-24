@@ -1,4 +1,4 @@
-define(['kendo'], function(kendo) {
+define(['kendo', '../phonegap/phonegap'], function(kendo, phonegap) {
 	return {
 		init: function(initEvt) {
 			// ... init event code ...
@@ -13,10 +13,10 @@ define(['kendo'], function(kendo) {
 		},
 
 		viewModel: kendo.observable({
-			message: 'setting',
-            clickBack: function(e) {
-                
-            }
+			message: 'new Defect',
+			addImage: function() {
+				phonegap.capturePicture();
+			}
 		}),
 	}
 });

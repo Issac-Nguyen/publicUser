@@ -1,9 +1,9 @@
-define(["./defects", "./defect", "./report", "./setting", "./modal-newDefect"], function(defectsView, defectView, reportView, settingView, modalNewDefectView) {
+define(["./defects", "./defect", "./report", "./setting", "./newDefect"], function(defectsView, defectView, reportView, settingView, newDefectView) {
 	return {
 		defectsView: defectsView,
 		defectView: defectView,
 		reportView: reportView,
 		settingView: settingView,
-		modalNewDefectView: modalNewDefectView
+		newDefectView: newDefectView
 	}
 });

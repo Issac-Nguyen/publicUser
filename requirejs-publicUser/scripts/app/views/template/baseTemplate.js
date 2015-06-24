@@ -1,5 +1,6 @@
-define(['./template-defect'], function(templateDefect) {
+define(['./template-defect', './template-image'], function(templateDefect, templateImage) {
 	return {
-		templateDefect: templateDefect.text
+		templateDefect: templateDefect.text,
+		templateImage: templateImage.text
 	}
 })

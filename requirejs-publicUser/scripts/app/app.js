@@ -10,7 +10,7 @@ define(['jQuery', 'kendo', 'app/views/baseView'], function($, kendo, baseView) {
 			defect: baseView.defectView,
 			report: baseView.reportView,
 			setting: baseView.settingView,
-			newDefect: baseView.modalNewDefectView
+			newDefect: baseView.newDefectView
 		}
 	}
 });

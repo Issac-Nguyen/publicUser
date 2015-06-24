@@ -1,6 +1,6 @@
 <!-- View -->
 <div data-role="view" id="report-view" data-title="Report"
-    data-model="app.views.report.viewModel"
+    data-model="app.views.newDefect.viewModel"
     data-transition="overlay:up" data-persist="true">
      <header data-role="header">
         <div data-role="navbar">
@@ -10,4 +10,5 @@
         </div>
     </header>
     <h1 data-bind="text: message" ></h1>
+    <img src="public/images/image_add.png" alt="add_image" data-bind="events:{click: addImage}"/>
 </div>
