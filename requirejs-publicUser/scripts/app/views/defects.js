@@ -34,9 +34,9 @@ define(['jQuery', 'kendo', './template/baseTemplate', './defect'], function($, k
 
 		viewModel: kendo.observable({
 			message: 'defects',
-			// source: kendo.data.DataSource.create({
-			// 	data: groupedData,
-			// }),
+            clickNew: function(e) {
+                 $("#modalview-login").kendoMobileModalView("open");
+            }
 		}),
 	}
 });
