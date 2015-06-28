@@ -1,4 +1,4 @@
-define(['jQuery', 'kendo', './template/baseTemplate', './defect'], function($, kendo, baseTemplate, defectView) {
+define(['jQuery', 'kendo', './template/baseTemplate', './defect', '../common/common'], function($, kendo, baseTemplate, defectView, common) {
 	var groupedData = [{
 		name: "foo",
 		description: 'des foo'
@@ -52,6 +52,9 @@ define(['jQuery', 'kendo', './template/baseTemplate', './defect'], function($, k
 
 		show: function(showEvt) {
 			// ... show event code ...
+		},
+		afterShow: function(e) {
+			common.heightHeader = e.view.element.find('.km-header').height();
 		},
 
 		viewModel: kendo.observable({

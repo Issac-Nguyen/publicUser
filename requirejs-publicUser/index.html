@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	 <meta charset="UTF-8">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
 	<title> Title for requirejs </title>
     <script src="cordova.js"></script>
 	<script data-main="scripts/main" src="scripts/libs/require.js"></script>
@@ -34,12 +35,13 @@
 <div data-role="view" id="defects-view" data-title="Defects"
 		data-layout="mobile-tabstrip"
         data-init="app.views.defects.init"
+        data-after-show="app.views.defects.afterShow"
     data-model="app.views.defects.viewModel">
      <header data-role="header">
         <div data-role="navbar">
             <!-- <a class="nav-button" data-align="left" data-role="backbutton">Back</a> -->
             <span data-role="view-title"></span>
-            <a data-align="right" data-role="button" class="nav-button" href="views/newDefect.html">+</a>
+            <a data-align="right" data-role="button" class="nav-button" href="views/newDefect.html">New Defect</a>
         </div>
     </header>
     <ul id="listDefects"></ul>

@@ -1,4 +1,4 @@
-define(['../common/helper'], function(helper) {
+define(['../common/helper', '../common/common'], function(helper, common) {
 
 	return {
 		capturePicture: function(callback) {
@@ -7,12 +7,12 @@ define(['../common/helper'], function(helper) {
                     window.resolveLocalFileSystemURI(imageData, function(fileEntry) {
                         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSys) {
                                 //The folder is created if doesn't exist
-                                fileSys.root.getDirectory("imgTest", {
+                                fileSys.root.getDirectory(common.folderImage, {
                                         create: true,
                                         exclusive: false
                                     },
                                     function(directory) {
-                                        fileEntry.moveTo(directory, fileEntry.name, function(etr) {
+                                        fileEntry.moveTo(directory, helper.datetimeString() + '.jpg', function(etr) {
                                             // self.lstImg.push({
                                             //     dataURL: etr.fullPath.substr(1)
                                             // });
